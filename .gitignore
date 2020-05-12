@@ -1,3 +1,6 @@
+# Big size csv files
+RAW_interactions.csv
+RAW_recipes.csv
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
