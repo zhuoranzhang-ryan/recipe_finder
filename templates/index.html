@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReciPurrrr!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <!--Nav-bar starts here-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light narvar-text">
+        <a class="navbar-brand heading_text" href="/"><b>ReciPurrrr!</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse nav-left" id="navbarNavDropdown">
+            <ul class="nav navbar-nav ml-auto">
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#">Data <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+
+    </nav>
+    <!--Nav-bar ends here-->
+
+    <div class="container col-md-12" id="parent-container">
+
+        <!-- Column for US Map  -->
+        <div class="row">
+            <div class="col-md-3" id="user-input-container">
+                <h4>Customize recipe</h4>
+
+                <h2>Find Grub</h2>
+                <div class="input-group input-group-lg">
+                    <input type="text" class="form-control" placeholder="" aria-label=""
+                        aria-describedby="basic-addon1">
+
+                    <div class="input-group-append">
+                        <button class="btn btn-success" type="button">Feed Me!</button>
+                    </div>
+                </div>
+                <!--Text input container ends here-->
+                </br>
+                <div class="prep-time-input-container">
+                    <h2>Prep. Time (NQ)</h2>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">
+                            <h5>Up to 15 mins</h5>
+                        </label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">
+                            <h5>Up to 30 mins</h5>
+                        </label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">
+                            <h5>Up to 45 mins</h5>
+                        </label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">
+                            <h5>Up to 60 mins</h5>
+                        </label>
+                    </div>
+                </div>
+                <!--Preparation Time container ends here-->
+            </div><!-- User Input Container ends here-->
+
+            <div class="col-md-6" id="recipe-container">
+                <h4>Recipe</h4>
+                <p align="center">
+                    <img src="../Resources/cat_chef.jpg" alt="I dont know what I am doing.">
+                </p>
+                <p>
+
+                    Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of
+                    classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
+                    professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                    consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
+                    literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
+                    of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This
+                    book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of
+                    Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                </p>
+
+
+
+
+            </div>
+
+            <div class="col-md-3" id="visualization-container">
+                <h4>Nutrition Info</h4>
+                <div class="radial-chart-container"> </div>
+                </br>
+                <div class="prep-time-container" id="power-gauge"> </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="https://d3js.org/d3.v2.min.js"></script>
+    <script src="../static/js/power_gauge.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../static/js/radial_bar_chart.js"></script>
+    <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+        <script src="//d3js.org/topojson.v1.min.js"></script>
+        <script src="../static/js/covid-map.js"></script>
+        <script src="../static/js/bar_chart.js"></script>
+        <script src="../static/js/scatter_plot.js"></script> -->
+</body>
+
+
+</html>
