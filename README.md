@@ -2,6 +2,10 @@
 
 A recipe recommendation engine for Cat Lover Foodies!
 
+<p align="center">
+  <img src="Resources/dashboard_snapshot.png">
+</p>
+
 ## Link to .csv files
 [Kaggle RAW_Recipes.csv](https://www.kaggle.com/shuyangli94/food-com-recipes-and-user-interactions/data?select=PP_recipes.csv#RAW_recipes.csv)
 
