@@ -85,8 +85,7 @@ input {
 input[type='text'] {
   /* background: #ffffff; */
   background:rgba(238, 236, 236, 0.2);
-  color: white;
-  
+  color: white; 
   width: 80%;
   height: 40px;
   border: none;
@@ -111,6 +110,36 @@ input[type='submit']:hover
 {
   background: #ff5722;
 }
+
+/* #search-button {
+  position: relative;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  /* transform: translate(50%, 50%);  */
+  /* margin-left: 15%; */
+  box-sizing: border-box;
+  transition: .5s;
+  /* padding: 0; */
+}
+
+#search-button {
+  position: relative;
+  border-radius: 0 25px 25px 0;
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #f8c016e1;
+  color: #425ba0;
+}
+
+#search-button:hover
+{
+  background: #ff5722;
+} */
+
 
 h1 {
   margin: 20px 0px 10px;

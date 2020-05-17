@@ -1,32 +1,29 @@
-from flask import Flask, redirect, render_template
+from flask import Flask, request, redirect, render_template
 # from flask_pymongo import PyMongo
+import search
 
 app = Flask(__name__)
 
+print(search.get_recipe_top3('beef broccoli'))
 
-# read csv into pandas
-# set up the mongo connection
-# calculate the tfidf matrix
+selection = ["Recipe_One", "Recipe_Two", "Recipe_Three"]
 
 @app.route('/')
 def index():
+
+    return render_template('index.html', top1=selection[0], top2=selection[1], top3=selection[2])
+
+
+@app.route('/search_recipe', methods=['POST'])
+
+def search_recipe():
+
+    query = request.form['query']
+    selection = search.get_recipe_top3(query)
+    print(selection)
     
-    return render_template('index.html')
+    return render_template('index.html', top1=selection[0], top2=selection[1], top3=selection[2])
 
-
-
-# # @app.route('/about)
-# def search(search query):
-
-#     python search.py
-
-    #   NLP.py    run get_recipe(search_query)
-
-
-    """read the csv into pandas"""
-    """NLP tfidf """
-
-#     return (id)
 
 
 if __name__ == '__main__':

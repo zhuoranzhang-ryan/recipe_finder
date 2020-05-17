@@ -57,9 +57,10 @@
         <div class="row">
                 <div class="box" id='search-box'>
                     <h1>Find Grub</h1>
-                    <form action="">
-                        <input type="text" class='' name="" id="" placeholder="name, ingredients, taste...">
-                        <input type="submit" name="" id="" value="Feed Me!">
+                    <form action="/search_recipe" method="post">
+                        <input type="text" name="query" placeholder="name, ingredients, taste...">
+                        <input type="submit" name="" value="Feed Me!">
+                        <!-- <a href="/search_recipe" id="search-button">Feed Me!</a> -->
                     </form>
                 </div>
         </div>
@@ -69,17 +70,19 @@
             <div class="box" id='recipe-cards'>
                 <div class="content" id="recipe-content">
                     <h2>01</h2>
-                    <h3>Recipe One</h3>
+                    <h3>{{top1}}</h3>
+                    <!-- <h3>Recipe One</h3> -->
                     <img src="../static/figure/1.jpg" alt="Recipe preview">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="javascript:;" onclick="toggle()">See recipe</a>
+                    <a href="/search_recipe" onclick="toggle()">See recipe</a>
                 </div>
             </div>
             
             <div class="box" id='recipe-cards'>
                 <div class="content" id="recipe-content">
                     <h2>02</h2>
-                    <h3>Recipe Two</h3>
+                    <h3>{{top2}}</h3>
+                    <!-- <h3>Recipe Two</h3> -->
                     <img src="../static/figure/2.jpg" alt="Recipe preview" >
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -92,7 +95,8 @@
             <div class="box" id='recipe-cards'>
                 <div class="content" id="recipe-content">
                     <h2>03</h2>
-                    <h3>Recipe Three</h3>
+                    <h3>{{top3}}</h3>
+                    <!-- <h3>Recipe Three</h3> -->
                     <img src="../static/figure/3.jpg" alt="Recipe preview">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
