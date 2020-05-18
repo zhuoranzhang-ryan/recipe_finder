@@ -57,3 +57,4 @@ def get_recipe_top3(query):
         top3.append(df_words.loc[bestindex]['id'])
     
     return top3
+

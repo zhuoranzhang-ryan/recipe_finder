@@ -74,7 +74,7 @@
                     <!-- <h3>Recipe One</h3> -->
                     <img src="../static/figure/1.jpg" alt="Recipe preview">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="/search_recipe" onclick="toggle()">See recipe</a>
+                    <a href="javascript:;" onclick="toggle(); show_recipe(1)">See recipe</a>
                 </div>
             </div>
             
@@ -88,7 +88,7 @@
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    <a href="javascript:;" onclick="toggle()">See recipe</a>
+                    <a href="javascript:;" onclick="toggle(); show_recipe(2)">See recipe</a>
                 </div>
             </div>
             
@@ -96,22 +96,23 @@
                 <div class="content" id="recipe-content">
                     <h2>03</h2>
                     <h3>{{top3}}</h3>
+                    <!-- <span>{{selection[2]}}</span> -->
                     <!-- <h3>Recipe Three</h3> -->
                     <img src="../static/figure/3.jpg" alt="Recipe preview">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
-                    <a href="javascript:;" onclick="toggle(); toggle()">See recipe</a>
+                    <a href="javascript:;" onclick="toggle(); show_recipe(3); toggle()">See recipe</a>
                 </div>
             </div>
             
         </div>
     </div>
     <div id='popup'>
-        <h2>Recipe Name</h2>
-        <p>ingredients</p>
-        <p>cooking time: </p>
-        <p>steps</p>
+        <h2>{{recipe_name}}</h2>
+        <p>{{ingredients}}</p>
+        <p>{{cooking_time}}</p>
+        <p>{{steps}}</p>
         <a href="javascript:;" onclick="toggle()">Close</a>
     </div>
     
@@ -153,15 +154,7 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="../static/js/radial_bar_chart.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-    <script type='text/javascript'>
-        function toggle() {
-            var blur = document.getElementById('blur');
-            blur.classList.toggle('active');
-            var popup = document.getElementById('popup');
-            popup.classList.toggle('active');
-            console.log("toggling");
-        }            
-    </script>
+    <script src="../static/js/render_recipe.js"></script>
 
     <!-- Initialize Swiper -->
     <script>
