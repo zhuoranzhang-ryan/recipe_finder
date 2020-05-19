@@ -36,6 +36,20 @@
 
     </nav>
     <!--Nav-bar ends here-->
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="radial-chart-container">
+
+            </div>
+        </div>
+        <!-- <div class="col-md-12">
+            <div class="donut-chart-container">
+
+            </div>
+        </div> -->
+    </div>
+    <!-- Radial Chart Visualization ends here-->
     <div id="vizContainer_greenhouse"></div>
     <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
     <script>
@@ -43,11 +57,13 @@
         function initViz() {
             var containerDiv = document.getElementById("vizContainer_greenhouse"),
                 url = "https://public.tableau.com/views/mom_2020_04_20/Sheet14?:display_count=y&:origin=viz_share_link";
+            // url = "https://public.tableau.com/views/Ratingsminutesnotebook/Story1?:display_count=y&:origin=viz_share_link";
 
             viz = new tableau.Viz(containerDiv, url);
         }
         initViz();
     </script>
+    <!--Citibike Tableau Viz ends here-->
 
     <div id="vizContainer_citibike"></div>
     <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
@@ -61,6 +77,16 @@
         }
         initViz();
     </script>
+    <!--Greenhouse Tableau Viz ends here-->
+
+
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="../static/js/radial_bar_chart.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!-- <script src="../static/js/donut_chart.js"></script> -->
+
+
 </body>
 
 </html>
