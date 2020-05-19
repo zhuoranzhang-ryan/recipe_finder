@@ -28,43 +28,46 @@
                     <a class="nav-link" href="#">Data <span class="sr-only">(current)</span></a>
                 </li> -->
                 <li class="nav-item active">
+                    <a class="nav-link" href="data_analysis.html">Data Analysis</a>
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="/about">About</a>
                 </li>
-            </div>
+        </div>
 
     </nav>
     <!--Nav-bar ends here-->
     <div class='blur-container' id="blur">
-    <div class="row" id="swiper-banner">
-            <div class="container col-md-12" >
-            <div class="swiper-container">
-                <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="../static/figure/1.jpg" alt="" height="100%"></div>
-                <div class="swiper-slide"><img src="../static/figure/2.jpg" alt="" height="100%"></div>
-                <div class="swiper-slide"><img src="../static/figure/3.jpg" alt="" height="100%"></div>
-                <div class="swiper-slide"><img src="../static/figure/4.jpg" alt="" height="100%"></div>
-                <div class="swiper-slide"><img src="../static/figure/5.jpg" alt="" height="100%"></div>
-                <div class="swiper-slide"><img src="../static/figure/6.jpg" alt="" height="100%"></div>
-                <div class="swiper-slide"><img src="../static/figure/7.jpg" alt="" height="100%"></div>
-                
+        <div class="row" id="swiper-banner">
+            <div class="container col-md-12">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../static/figure/1.jpg" alt="" height="100%"></div>
+                        <div class="swiper-slide"><img src="../static/figure/2.jpg" alt="" height="100%"></div>
+                        <div class="swiper-slide"><img src="../static/figure/3.jpg" alt="" height="100%"></div>
+                        <div class="swiper-slide"><img src="../static/figure/4.jpg" alt="" height="100%"></div>
+                        <div class="swiper-slide"><img src="../static/figure/5.jpg" alt="" height="100%"></div>
+                        <div class="swiper-slide"><img src="../static/figure/6.jpg" alt="" height="100%"></div>
+                        <div class="swiper-slide"><img src="../static/figure/7.jpg" alt="" height="100%"></div>
+
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
                 </div>
-                <!-- Add Pagination -->
-                <div class="swiper-pagination"></div>
             </div>
         </div>
-        </div>
-        
+
         <div class="row">
-                <div class="box" id='search-box'>
-                    <h1>Find Grub</h1>
-                    <form action="/search_recipe" method="post">
-                        <input type="text" name="query" placeholder="name, ingredients, taste...">
-                        <input type="submit" name="" value="Feed Me!">
-                        <!-- <a href="/search_recipe" id="search-button">Feed Me!</a> -->
-                    </form>
-                </div>
+            <div class="box" id='search-box'>
+                <h1>Find Grub</h1>
+                <form action="/search_recipe" method="post">
+                    <input type="text" name="query" placeholder="name, ingredients, taste...">
+                    <input type="submit" name="" value="Feed Me!">
+                    <!-- <a href="/search_recipe" id="search-button">Feed Me!</a> -->
+                </form>
+            </div>
         </div>
-        
+
 
         <div class="row" id='recipe-row'>
             <div class="box" id='recipe-cards'>
@@ -77,21 +80,21 @@
                     <a href="javascript:;" onclick="toggle(); show_recipe(1)">See recipe</a>
                 </div>
             </div>
-            
+
             <div class="box" id='recipe-cards'>
                 <div class="content" id="recipe-content">
                     <h2>02</h2>
                     <h3>{{top2}}</h3>
                     <!-- <h3>Recipe Two</h3> -->
-                    <img src="../static/figure/2.jpg" alt="Recipe preview" >
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <img src="../static/figure/2.jpg" alt="Recipe preview">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <a href="javascript:;" onclick="toggle(); show_recipe(2)">See recipe</a>
                 </div>
             </div>
-            
+
             <div class="box" id='recipe-cards'>
                 <div class="content" id="recipe-content">
                     <h2>03</h2>
@@ -100,12 +103,12 @@
                     <!-- <h3>Recipe Three</h3> -->
                     <img src="../static/figure/3.jpg" alt="Recipe preview">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     </p>
                     <a href="javascript:;" onclick="toggle(); show_recipe(3); toggle()">See recipe</a>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <div id='popup'>
@@ -115,11 +118,11 @@
         <p>{{steps}}</p>
         <a href="javascript:;" onclick="toggle()">Close</a>
     </div>
-    
 
-            <!-- User Input Container ends here-->
 
-            <!-- <div class="col-md-6" id="recipe-container">
+    <!-- User Input Container ends here-->
+
+    <!-- <div class="col-md-6" id="recipe-container">
                 <h4>Recipe</h4>
                 <p align="center">
                     <img src="../static/figure/cat_chef.jpg" alt="I dont know what I am doing.">
@@ -141,7 +144,7 @@
 
             </div> -->
 
-            <!-- <div class="col-md-3" id="visualization-container">
+    <!-- <div class="col-md-3" id="visualization-container">
                 <h4>Nutrition Info</h4>
                 <div class="radial-chart-container"> </div>
                 </br>
@@ -159,23 +162,23 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper('.swiper-container', {
-          effect: 'coverflow',
-          grabCursor: true,
-          centeredSlides: true,
-          slidesPerView: 'auto',
-          coverflowEffect: {
-            rotate: 20,
-            stretch: 0,
-            depth: 200,
-            modifier: 1,
-            slideShadows : true,
-          },
-        //   loop: true,
-        //   pagination: {
-        //     el: '.swiper-pagination',
-        //   },
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 20,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            //   loop: true,
+            //   pagination: {
+            //     el: '.swiper-pagination',
+            //   },
         });
-      </script>
+    </script>
 
     <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
         <script src="//d3js.org/topojson.v1.min.js"></script>

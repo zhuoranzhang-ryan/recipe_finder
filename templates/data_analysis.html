@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReciPurrrr!</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../static/css/style.css" />
+
+</head>
+
+<body>
+    <!--Nav-bar starts here-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light narvar-text" id="nav-bar">
+        <a class="navbar-brand heading_text" href="/"><b>ReciPurrrr!</b></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon "></span>
+        </button>
+        <div class="collapse navbar-collapse nav-left" id="navbarNavDropdown">
+            <ul class="nav navbar-nav ml-auto">
+                <!-- <li class="nav-item active">
+                    <a class="nav-link" href="#">Data <span class="sr-only">(current)</span></a>
+                </li> -->
+                <li class="nav-item active">
+                    <a class="nav-link" href="data_analysis.html">Data Analysis</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+        </div>
+
+    </nav>
+    <!--Nav-bar ends here-->
+    <div id="vizContainer_greenhouse"></div>
+    <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script>
+        var viz
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer_greenhouse"),
+                url = "https://public.tableau.com/views/mom_2020_04_20/Sheet14?:display_count=y&:origin=viz_share_link";
+
+            viz = new tableau.Viz(containerDiv, url);
+        }
+        initViz();
+    </script>
+
+    <div id="vizContainer_citibike"></div>
+    <script src="https://us-east-1.online.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script>
+        var viz
+        function initViz() {
+            var containerDiv = document.getElementById("vizContainer_citibike"),
+                url = "https://public.tableau.com/views/citibike_nov/Tripsinnov?:display_count=y&:origin=viz_share_link";
+
+            viz = new tableau.Viz(containerDiv, url);
+        }
+        initViz();
+    </script>
+</body>
+
+</html>
