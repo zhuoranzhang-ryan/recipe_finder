@@ -141,12 +141,13 @@ input[type='submit']:hover
 } */
 
 
-h1 {
-  margin: 20px 0px 10px;
+#search-box h1 {
+  margin: 200px 0px 10px;
   padding: 0;
   color: #ffffff;
+  /* color: black; */
   text-align: center;
-  font-size: 30px;
+  font-size: 50px;
 }
 
 #recipe-row {
