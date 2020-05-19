@@ -408,3 +408,6 @@ path.arc:hover {
   color: white;
   padding: 6px;
 }
+.radial-chart-container{
+  background-color: wheat;
+}
