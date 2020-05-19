@@ -22,8 +22,12 @@ const PI = Math.PI,
 
 d3.csv('../Resources/Example/energy.csv', (error, data) => {
     let scale = d3.scaleLinear()
-        .domain([0, d3.max(data, d => d.value) * 1.1])
-        .range([0, 2 * PI]);
+       // .domain([0, d3.max(data, d => d.value) * 1.1])
+       // .range([0, 1.95 * PI]);
+        .domain([0, d3.max(data, d => parseInt(d.value)) * 1.1])
+        .range([0, 1.95 * PI]);
+    
+    console.log(d3.max(data, d => d.value));
 
     let ticks = scale.ticks(numTicks).slice(0, -1);
     let keys = data.map((d, i) => d.name);
