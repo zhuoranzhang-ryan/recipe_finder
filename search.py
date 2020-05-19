@@ -29,7 +29,7 @@ def query_preprocessing(query):
     return query
 
 # define a function to return the best three recipes
-def get_recipe_top3(query):
+def get_selection_top3(query):
     
     query = query_preprocessing(query)
     query_matrix = model.transform([query])
